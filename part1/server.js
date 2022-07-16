@@ -8,11 +8,12 @@ const express = require("express");
 // here we import the express package
 
 const app = express();
+app.use(express.static(__dirname + "/public"));
 // here we initialize an http server. Much simpler right??
 // home-page -> www.booking.com -> /
 
 // here we tell the server to handle a GET request to the page '/'
-console.log("ABSOLUTE PATH TO CURRENT FILE", __dirname);
+// console.log("ABSOLUTE PATH TO CURRENT FILE", __dirname);
 app.get("/", (request, response) => {
   // here we response with Home Page
   response.sendFile(__dirname + "/views/index.html");
