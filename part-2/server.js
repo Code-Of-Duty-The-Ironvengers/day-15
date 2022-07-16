@@ -32,7 +32,9 @@ app.get("/", (request, response) => {
 });
 
 app.get("/about", (request, response) => {
-  response.render("about", { title: "About page" });
+  response.render("about", {
+    title: "About page",
+  });
 });
 
 app.listen(3000, () => {
